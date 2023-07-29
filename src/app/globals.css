@@ -1,27 +1,170 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.dashboard{
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.dashboard__topbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #181b23;
+    border-radius: 15px;
+    padding: 15px;
+    border: 0.5px solid #393a3f;
+    gap:10px;
+}
+
+.topbar__usage{
+    flex:1;
+    border-right: 0.5px solid #393a3f;
+    padding-right: 10px;
+}
+
+.transcoder-head{
+    border:none;
+}
+
+.heading-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.heading-container img{
+    width: 20px;
+    height: 20px;
+}
+
+.charts-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 16px;
+    max-width: 100%; 
+    overflow: hidden; 
+}
+
+.chart{
+    background-color: #181b23;
+    border-radius: 15px;
+    padding: 25px;
+    border: 0.5px solid #393a3f;
+}
+
+.heading{
+    color: #696f75;
+    font-size: 14px;
+    padding: 10px;
+    font-weight:bold;
+}
+
+.usage{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    margin: 0; 
 }
+
+.filter-btn{
+    margin-right: 20px;
+    border: none;
+    background-color: #181b23;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dashboard__filter{
+    text-align: right;
+    padding: 20px;
+    padding: 30px;
+}
+
+.filter-heading{
+    color: white;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.title{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 0px;
+    border-bottom: 0.5px #5d5d5e solid;
+}
+
+.title-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 0px;
+    border-bottom: 0.5px #5d5d5e solid;
+}
+
+.view-all{
+    color: white;
+}
+
+.chart canvas {
+    margin-top: 5%; /* Add top margin to the canvas */
+  }  
+
+th{
+    color: white;
+    font-size: 12px;
+    font-weight:bold;
+    background-color: #101219;
+    padding:20px;
+}
+  .dashboard__table {
+    text-align: left;
+    color:white;
+    border-collapse: separate; /* Separate the borders */
+    border-spacing: 0; /* Remove the gap between table rows */
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .table-title{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .dashboard__table th,
+.dashboard__table td{
+  padding: 20px; /* Add padding between table cells */
+}
+
+.dashboard__table td{
+    font-size: 13px;
+    color:white;
+}
+  
+.dashboard__table th,
+.dashboard__table tbody tr:not(:last-child) td {
+    border-bottom: 0.5px solid #5d5d5e; /* Add border after each row (except the last row) */
+}
+.dashboard__table td:first-child:not(:last-child) {
+    text-decoration: underline; /* Underline the text in the first column (excluding the last cell) */
+  }
+
+.dashboard__table__button{
+    border-radius: 5px;
+    border: none;
+    padding: 4px;
+    font-weight: bold;
+    color: #2810c9;
+    background-color: #9c92d8;
+}
+  
+
+  
+  
